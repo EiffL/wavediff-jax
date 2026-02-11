@@ -1,0 +1,3 @@
+[submodule "extern/wf-psf"]
+	path = extern/wf-psf
+	url = https://github.com/CosmoStat/wf-psf.git
