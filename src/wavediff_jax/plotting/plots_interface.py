@@ -134,8 +134,6 @@ class MetricsPlotHandler:
 
     Parameters
     ----------
-    id: str
-        Class ID name
     plotting_params: Recursive Namespace object
     metrics: dict
         Dictionary containing list of metrics
@@ -147,6 +145,10 @@ class MetricsPlotHandler:
         Root-mean square error label
     std_rmse: str
         Standard error on root-mean square error standard label
+    rel_rmse: str
+        Relative root-mean square error label
+    plot_title: str
+        Title for the plot
     plots_dir: str
         Output directory for metrics plots
 
