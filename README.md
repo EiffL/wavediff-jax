@@ -1,8 +1,13 @@
 # WaveDiff-JAX
 
+> [!WARNING]
+> **This is an experimental JAX port and is not validated for scientific use.**
+> If you are looking for the production-ready, peer-reviewed PSF modelling framework, please use the original **[WaveDiff (wf-psf)](https://github.com/CosmoStat/wf-psf)** by CosmoStat.
+> This repository is a work-in-progress reimplementation for development and experimentation purposes only. Numerical equivalence with the original has **not** been fully verified. Do not use this for published science results.
+
 **Differentiable PSF modelling for astronomical imaging, powered by JAX.**
 
-WaveDiff-JAX is a complete reimplementation of the [WaveDiff](https://github.com/CosmoStat/wf-psf) framework in [JAX](https://github.com/jax-ml/jax) and [Equinox](https://github.com/patrick-kidger/equinox). It models spatially-varying, polychromatic Point Spread Functions (PSFs) using Zernike polynomial wavefronts and FFT-based Fourier optics — fully differentiable and JIT-compiled for high-performance training on GPU/TPU.
+WaveDiff-JAX is an experimental reimplementation of the [WaveDiff](https://github.com/CosmoStat/wf-psf) framework in [JAX](https://github.com/jax-ml/jax) and [Equinox](https://github.com/patrick-kidger/equinox). It models spatially-varying, polychromatic Point Spread Functions (PSFs) using Zernike polynomial wavefronts and FFT-based Fourier optics — fully differentiable and JIT-compiled for high-performance training on GPU/TPU.
 
 ---
 
