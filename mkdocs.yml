@@ -1,0 +1,106 @@
+site_name: WaveDiff-JAX
+site_description: Differentiable PSF modelling for astronomical imaging, powered by JAX
+site_url: https://your-org.github.io/wavediff-jax/
+repo_url: https://github.com/your-org/wavediff-jax
+repo_name: wavediff-jax
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+          options:
+            show_source: true
+            show_root_heading: true
+            show_root_full_path: false
+            heading_level: 3
+            members_order: source
+            show_signature_annotations: true
+            separate_signature: true
+            docstring_style: numpy
+            merge_init_into_class: true
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: getting-started/installation.md
+    - Quick Start: getting-started/quickstart.md
+    - Concepts: getting-started/concepts.md
+  - User Guide:
+    - PSF Models: guide/models.md
+    - Training: guide/training.md
+    - Data Loading: guide/data.md
+    - Evaluation: guide/evaluation.md
+    - Simulation: guide/simulation.md
+    - Configuration: guide/configuration.md
+  - API Reference:
+    - Overview: api/index.md
+    - optics: api/optics.md
+    - models: api/models.md
+    - training: api/training.md
+    - data: api/data.md
+    - metrics: api/metrics.md
+    - sims: api/sims.md
+    - utils: api/utils.md
+    - plotting: api/plotting.md
+  - Architecture:
+    - Design Decisions: architecture/design.md
+    - TF to JAX Migration: architecture/migration.md
